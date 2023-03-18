@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <div id="container-all-pages">
+    <div class="players-name-page show" id="players-name-page">
+      <h1>Bem Vindo ao Jogo da Velha</h1>
+      <form class="players-register" id="form-register">
+        <div class="flex-items">
+          <img src="./img/01d0e306b2110cc78690210e92c65eae_w200.gif" alt="">
+          <div class="division-size">
+            <label for="player1">Insira o nome do PRIMEIRO jogador</label> 
+            <br> <br>
+            <input type="text" id="player1"  required autofocus>
+          </div>
+          <div class="division-size">
+            <label for="player2">Insira o nome do SEGUNDO jogador</label>
+            <br> <br>
+            <input type="text" id="player2" required autofocus>
+          </div>
+          <img src="./img/12402.gif" alt="">
+        </div>
+        <br>
+        <input type="submit" value="Jogar" id="save-players-names">
+      </form>
+    </div>
+
+    <section class="game-page" id="game-page">
+      <main class="game-container in" id="game-containers">
+        <div class="style-board" id="one"></div>
+        <div class="style-board" id="two"></div>
+        <div class="style-board" id="three"></div>
+        <div class="style-board" id="four"></div>
+        <div class="style-board" id="five"></div>
+        <div class="style-board" id="six"></div>
+        <div class="style-board" id="seven"></div>
+        <div class="style-board" id="eight"></div>
+        <div class="style-board" id="nine"></div>
+      </main>
+      <div class="tool-bar" id="tool-bar">
+        <div class="reset-button" id="button-reset"></div> 
+        <p>Resetar</p>
+        <img src="./img/01d0e306b2110cc78690210e92c65eae_w200.gif" alt="" class="player-1 time-appear" id="player-1-time">
+        <img src="./img/12402.gif" alt="" class="player-2" id="player-2-time">
+        <h3 class="name-add" id="player-name-add"></h3>
+      </img>
+    </section>
+  </div>
+</body>
+</html>
