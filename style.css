@@ -17,16 +17,16 @@
 }
 
 .players-name-page {
-  display: none;
-}
-
-.show{
-  display: flex;
   flex-direction: column;
   min-height:100vh;
   width: 80%;
   gap: 200px;
   transition: 3000ms;
+  display: none;
+}
+
+.show{
+  display: flex;
 }
 
 .show:hover {
@@ -77,8 +77,6 @@
 #save-players-names {
   justify-self: center;
   align-self: center;
-  width: 30%;
-  height: 10%;
   background-color: #7B68EE;
   font-weight: bold;
   cursor: pointer;
@@ -106,7 +104,6 @@
 }
 
 .game-container .style-board {
-  min-height: 150px;
   background-color: #363636;
   border: white solid 1px;
   border-radius: 10px;
@@ -121,7 +118,6 @@
 }
 .in {
   display: grid;
-  grid-template-columns: repeat(3,150px);
   column-gap: 2px;
   row-gap:2px;
 }
@@ -131,9 +127,8 @@
   align-items: center;
   gap: 20px;
   margin-top: 20px;
-  width: 450px;
-  height: 80px;
   transition: 100ms;
+  overflow-y: hidden;
 }
 
 .tool-bar:hover {
@@ -187,4 +182,118 @@
 
 .name-add {
  color: white;
+}
+
+
+@media (max-width: 10000px) {
+
+  .players-name-page h1 {
+    text-align: center;
+  }
+
+  .show {
+    font-size: xx-large;
+  }
+
+  #save-players-names {
+    width: 50%;
+    height: 20%;
+    font-size: 30px;
+  }
+
+  .style-board {
+    min-height: 200px;
+  }
+  .in {
+    grid-template-columns: repeat(3,200px);
+  }
+
+  .tool-bar {
+  width: 600px;
+  height: 100px;
+  }
+}
+
+
+@media (max-width: 1440px) {
+
+  .show {
+    font-size: 30px;
+  }
+
+  #save-players-names {
+    width: 30%;
+    height: 10%;
+    font-size: medium;
+  }
+
+  .style-board {
+    min-height: 150px;
+  }
+  .in {
+    grid-template-columns: repeat(3,150px);
+  }
+
+  
+  .tool-bar {
+    width: 450px;
+    height: 80px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+  .show {
+    width: 100%;
+    font-size: 10px;
+    background-color: #363636;
+  }
+
+  .flex-items input {
+    width: 80%;
+  }
+
+  #save-players-names {
+    width: 40%;
+    height: 8%;
+    font-size: small;
+  }
+  .style-board {
+    min-height: 100px;
+  }
+  .in {
+    grid-template-columns: repeat(3,100px);
+  }
+  .tool-bar {
+    width: 300px;
+    height: 80px;
+    }
+}
+
+@media (max-width: 340px) {
+  .flex-items img {
+    display: none;
+  }
+  .players-register .division-size {
+    width: 50%;
+    align-self: center;
+  }
+
+  .style-board {
+    min-height: 50px;
+  }
+  .in {
+    grid-template-columns: repeat(3,50px);
+  }
+  .tool-bar {
+    width: 100%;
+    height: 50px;
+    font-size: 10px ;
+    }
+
+  .tool-bar div{
+    border-right: 15px solid rgb(212, 212, 212);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
 }
